@@ -9,7 +9,7 @@ const Header = ({ cartCount, openCartModal }) => {
      text-white  text-lg"
     >
       <button
-        className="cursor-pointer hover:underline font-[DM_Serif_Text] text-2xl"
+        className="cursor-pointer font-[DM_Serif_Text] text-2xl"
         onClick={() => window.location.reload()}
       >
         e-Shop
