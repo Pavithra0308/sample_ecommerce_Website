@@ -22,15 +22,15 @@ const ProductList = ({ addToCart, cart }) => {
   }, []);
 
   return (
-    <div className="product-container flex flex-wrap w-full mx-auto font-serif gap-10  justify-center ">
+    <div className="product-container flex flex-wrap w-full mx-auto font-serif gap-10  justify-center mb-5">
       {isLoading ? (
-        <h1 className="text-xl  mt-5">Loading products...</h1>
+        <h1 className="text-xl text-left mt-5">Loading products...</h1>
       ) : (
         products.map((product) => (
           <div
             key={product.id}
-            className="product-card shadow-md hover:shadow-xl w-1/5 flex flex-col items-center justify-between p-3
-            transform transition duration-200 hover:scale-105"
+            className=" shadow-md hover:shadow-xl w-1/4 flex flex-col items-center justify-between p-3 mt-5
+            transform transition duration-200 hover:scale-105 "
           >
             <img
               src={product.image}
@@ -45,8 +45,8 @@ const ProductList = ({ addToCart, cart }) => {
               <p className="font-bold font-sans text-xl">${product.price}</p>
               <div className="flex justify-end mt-auto">
                 <button
-                  className="mt-auto self-end w-1/3 h-10 hover:text-orange-300 text-white bg-cyan-950 rounded-lg
-                  cursor-pointer items-end disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  className="mt-auto self-end w-1/3 h-10 hover:text-orange-400 text-white bg-cyan-950 rounded-lg
+                  cursor-pointer items-end disabled:bg-gray-300  disabled:cursor-not-allowed disabled:text-white"
                   disabled={cart.some((item) => item.id === product.id)}
                   onClick={() => addToCart(product)}
                 >

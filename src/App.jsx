@@ -46,7 +46,7 @@ function App() {
       <div className="max-w-screen overflow-hidden">
         <img
           src={myBanner}
-          className="w-full h-fit object-cover"
+          className="w-full h-fit mt-10 object-cover"
           alt="Banner"
         />
       </div>
